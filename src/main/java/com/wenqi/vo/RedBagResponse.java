@@ -1,24 +1,21 @@
 package com.wenqi.vo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
 /**
- * 发红包配置详情
+ * 发红包领取详情
  *
  * @author wuwenqi
  * @date 2022-06-05
  */
 @Data
-@TableName("red_bag_config")
-public class RedBagConfig implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class RedBagResponse implements Serializable {
 
     /**
      * 主键
@@ -58,5 +55,21 @@ public class RedBagConfig implements Serializable {
     /**
      * 红包过期时间
      */
-    private Long expireTime;
+    private Date expireTime;
+
+
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
+
+    /**
+     * 领取明细
+     */
+    private List<RedBagAllocateDetailResponse> redBagAllocateDetailResponseList;
 }

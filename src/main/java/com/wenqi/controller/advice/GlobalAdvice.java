@@ -31,13 +31,13 @@ public class GlobalAdvice {
     @ExceptionHandler(value = ClientException.class)
     public BaseResponse handleClientException(ClientException ex) {
 
-        log.error("ClientException", ex);
+//        log.error("ClientException", ex);
         return BaseResponse.failure(StatusEnum.PARAM_ERROR.getCode(), ex.getMessage());
     }
 
     @ExceptionHandler(value = ServerException.class)
     public BaseResponse handleServerException(ServerException ex) {
-        log.error("ServerException", ex);
+//        log.error("ServerException", ex);
         return BaseResponse.failure(StatusEnum.INTERNAL_SERVER_ERROR.getCode(), ex.getMessage());
     }
 
@@ -72,7 +72,7 @@ public class GlobalAdvice {
 
     @ExceptionHandler(value = Exception.class)
     public BaseResponse<String> handleException(Exception ex) {
-        log.error("{}", ex.getClass(), ex);
+//        log.error("{}", ex.getClass(), ex);
         return BaseResponse.failure(StatusEnum.INTERNAL_SERVER_ERROR.getCode(), ex.getMessage());
     }
 }

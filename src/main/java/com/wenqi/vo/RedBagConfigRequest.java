@@ -13,7 +13,6 @@ import java.io.Serializable;
  * @date 2022-06-05
  */
 @Data
-@TableName("red_bag_config")
 public class RedBagConfigRequest implements Serializable {
     /**
      * 主键，删除时使用
