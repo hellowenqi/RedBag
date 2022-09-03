@@ -12,7 +12,7 @@
         <mybatis-plus-boot-start-version>3.5.1</mybatis-plus-boot-start-version>
         <mybatis-plus-generator-version>3.5.1</mybatis-plus-generator-version>
         <junit-version>4.12</junit-version>
-        <c3p0-version>0.9.5.2</c3p0-version>
+        <c3p0-version>0.9.5.4</c3p0-version>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
